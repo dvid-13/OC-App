@@ -1,0 +1,11 @@
+.vscode
+
+.env
+
+dist
+
+mysql
+
+scripts
+
+node_modules

@@ -1,0 +1,18 @@
+FROM node:16.13.2-alpine
+
+RUN mkdir -p /usr/src/app
+WORKDIR /usr/src/app
+
+COPY package*.json /usr/src/app
+
+RUN npm install
+
+COPY . /usr/src/app/
+
+RUN echo ls /usr/src/app
+
+RUN npm run build
+
+EXPOSE 3300
+
+CMD [ "npm", "start" ]

@@ -1,0 +1,29 @@
+@api = http://localhost:3000/api
+
+GET {{api}}
+###
+GET {{api}}/1
+###
+GET {{api}}/count
+###
+GET {{api}}/getdata/1
+###
+POST {{api}}/saveoc
+content-type: application/json
+
+{
+    "name" : "Orden 5",
+    "company" : "Fertica"
+}
+###
+DELETE {{api}}
+content-type: application/json
+
+{
+    "id" : 7
+}
+###
+PUT {{api}}/1
+
+# v8.10.0
+# npm  v3.5.2
