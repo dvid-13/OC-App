@@ -15,70 +15,69 @@ const router = Router();
 /**
  * @swagger
  * tags:
- *  name: Tasks
- *  description: Tasks endpoint
+ *  name: Order
+ *  description: Orders endpoint
  */
 
 /*********************************************
  * @swagger
- * /tasks/count:
+ * /api/count:
  *  get:
- *    summary: Get all tasks counter
- *    tags: [Tasks]
+ *    summary: Get all orders counter
+ *    tags: [Order]
  */
 router.get("/api/count", getCount);
 
 /*********************************************
  * @swagger
- * /tasks:
+ * /api/getactive:
  *  get:
- *    sumary: Get all tasks
- *    tags: [Tasks]
+ *    sumary: Get all orders
+ *    tags: [Order]
  */
 router.get("/api/getactive", getActives);
 
 /***
  * @swagger
- * /tasks:
+ * /api/getall:
  *  get:
- *    sumary: Get all tasks
- *    tags: [Tasks]
+ *    sumary: Get all orders
+ *    tags: [Order]
  */
 router.get("/api/getall", getAll);
 
+/***
+ * @swagger
+ * /api/:id:
+ *  get:
+ *    summary: Get one order by id
+ *    tags: [Order]
+ */
+router.get("/api/getdata/:id", getData);
 /*********************************************
  * @swagger
- * /tasks:
+ * /api/saveoc:
  *  post:
- *    summary: Create a new tasks
- *    tags: [Tasks]
+ *    summary: Create a new order
+ *    tags: [Order]
  */
 router.post("/api/saveoc", saveOC);
 
 /***
  * @swagger
- * /tasks:
+ * /api/savedata:
  *  post:
- *    summary: Create a new tasks
- *    tags: [Tasks]
+ *    summary: Create a new orders
+ *    tags: [Order]
  */
 router.post("/api/savedata", saveData);
 
 /***
  * @swagger
- * /tasks/:id:
- *  get:
- *    summary: Get one task by id
- *    tags: [Tasks]
- */
-router.get("/api/getdata/:id", getData);
-
-/***
- * @swagger
- * /api:
+ * /api/:id:
  *  delete:
- *    summary: Delete a tasks by id
- *    tags: [Tasks]
+ *    summary: Delete a order by id
+ *    tags: [Order]
  */
 router.delete("/api/:id", deleteData);
 
@@ -86,8 +85,8 @@ router.delete("/api/:id", deleteData);
  * @swagger
  * /api/:id:
  *  put:
- *    summary: Update a task by id
- *    tags: [Tasks]
+ *    summary: Update a order by id
+ *    tags: [Order]
  */
 router.put("/api/:id", updateOC);
 

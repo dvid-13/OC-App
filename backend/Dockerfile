@@ -1,7 +1,12 @@
-FROM node:16.13.2-alpine
+FROM node:12.22.12-alpine
 
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
+
+ENV host=localhost
+ENV user=root
+ENV pass=password
+ENV db=data
 
 COPY package*.json /usr/src/app
 

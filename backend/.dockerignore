@@ -4,3 +4,5 @@ mysql
 scripts
 dist
 .vscode
+.env
+docker-compose.yml

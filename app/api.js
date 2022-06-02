@@ -1,4 +1,4 @@
-const API = "http://bjgiiot.tk:3300/api";
+const API = "http://54.203.235.252:3300/api";
 
 export const getCount = async () => {
   const res = await fetch(`${API}/count`, {
