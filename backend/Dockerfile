@@ -8,7 +8,7 @@ ENV user=root
 ENV pass=password
 ENV db=data
 
-COPY package*.json /usr/src/app
+COPY package*.json /usr/src/app/
 
 RUN npm install
 
